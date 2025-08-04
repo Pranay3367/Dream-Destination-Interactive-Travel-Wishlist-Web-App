@@ -1,6 +1,6 @@
 Dream Destination – Interactive Travel Wishlist Web App
 
-<img width="1857" height="928" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/58a54aec-51e9-41f3-bb7a-30154b50a944" />
+<img width="1852" height="1010" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/2da20da6-ec0a-4f04-89fe-9580a25497b3" />
 
 
 Project Description
