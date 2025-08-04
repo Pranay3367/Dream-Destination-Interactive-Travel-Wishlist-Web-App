@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dream Destination - Interactive Travel Wishlist</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">
+                <span class="header__icon">✈</span>
+                Dream Destination
+            </h1>
+            <nav class="header__nav">
+                <button class="btn btn--outline" id="clearWishlistBtn">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="app-layout">
+                <!-- Interactive Map Section -->
+                <section class="map-section">
+                    <div class="map-header">
+                        <h2>🌍 Explore the World</h2>
+                        <p>Click on any country to discover your next dream destination</p>
+                    </div>
+                    <div class="world-map" id="worldMap">
+                        <!-- Countries will be dynamically populated -->
+                    </div>
+                </section>
+
+                <!-- Wishlist Panel -->
+                <aside class="wishlist-panel">
+                    <div class="wishlist-header">
+                        <h2>✨ My Wishlist</h2>
+                        <div class="wishlist-controls">
+                            <div class="search-container">
+                                <i class="fas fa-search search-icon"></i>
+                                <input 
+                                    type="text" 
+                                    class="form-control search-input" 
+                                    id="searchInput" 
+                                    placeholder="Search destinations..."
+                                />
+                            </div>
+                            <select class="form-control sort-select" id="sortSelect">
+                                <option value="name">Sort by Name</option>
+                                <option value="date">Sort by Date Added</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="wishlist-content" id="wishlistContent">
+                        <div class="empty-state" id="emptyState">
+                            <div class="empty-state__icon">🗺</div>
+                            <h3>Start Your Journey</h3>
+                            <p>Click on countries in the map to add them to your wishlist!</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Country Details Modal -->
+    <div class="modal-overlay" id="countryModal">
+        <div class="modal">
+            <div class="modal__header">
+                <button class="modal__close" id="closeCountryModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal__content" id="countryModalContent">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Mood Board Modal -->
+    <div class="modal-overlay" id="moodBoardModal">
+        <div class="modal modal--large">
+            <div class="modal__header">
+                <h3 id="moodBoardTitle">Mood Board</h3>
+                <button class="modal__close" id="closeMoodBoardModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal__content">
+                <div class="mood-board" id="moodBoardContent">
+                    <!-- Dynamic mood board content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
